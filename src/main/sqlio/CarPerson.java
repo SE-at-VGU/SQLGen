@@ -59,27 +59,3 @@ public class CarPerson {
         }
     }
 }
-
-/*
- * loading large file mysql -uroot -p thesis_test --local-infile --
- * execute="LOAD DATA LOCAL INFILE 'thesis_car' INTO TABLE car FIELDS TERMINATED BY ',' LINES STARTING BY '#' ("
- * color"); SHOW WARNINGS"
- * 
- * mysql -uroot -p thesis_test --local-infile --
- * execute="LOAD DATA LOCAL INFILE 'thesis_person' INTO TABLE person FIELDS TERMINATED BY ',' LINES STARTING BY '#' ("
- * name"); SHOW WARNINGS"
- * 
- * mysql -uroot -p thesis_test --local-infile --
- * execute="LOAD DATA LOCAL INFILE 'thesis_employee' INTO TABLE employee FIELDS TERMINATED BY ',' LINES STARTING BY '#' ("
- * person"); SHOW WARNINGS"
- * 
- * mysql -uroot -p thesis_test --local-infile --
- * execute="LOAD DATA LOCAL INFILE 'thesis_car_person' INTO TABLE car_person FIELDS TERMINATED BY ',' LINES STARTING BY '#' ("
- * car","person"); SHOW WARNINGS"
- * 
- * 
- * 
- * size of a table SELECT table_name AS `car`, round(((data_length +
- * index_length) / 1024 / 1024), 2) `Size in MB` FROM information_schema.TABLES
- * WHERE table_schema = "thesis_test" AND table_name = "car";
- */
